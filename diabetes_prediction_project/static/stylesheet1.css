@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('C:\\data science\\diabetes_prediction_project\\diabetes_prediction_project\\static\\home1.jpg'); /* URL of the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    font-family: Arial, sans-serif; /* Specify font family */
+    color: #fff; /* Text color */
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 150px auto; /* Adjust the top margin to move the container down from the top */
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+h1 {
+    font-size: 36px; /* Larger font size for heading */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+p {
+    font-size: 18px; /* Font size for paragraphs */
+    margin-bottom: 20px; /* Add space below paragraphs */
+}
+
+a {
+    color: #ff6600; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make links bold */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}

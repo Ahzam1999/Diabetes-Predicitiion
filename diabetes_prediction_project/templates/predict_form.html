@@ -1,0 +1,65 @@
+<!-- diabetes_prediction_app/templates/predict_form.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link rel="stylesheet" href="{% static 'C:\\data science\\diabetes_prediction_project\\diabetes_prediction_project\\static\\stylesheet2.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'C:\\data science\\diabetes_prediction_project\\diabetes_prediction_project\\static\\home.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            /* Add additional styling for the container if needed */
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Form</h1>
+        <form action="{% url 'predict' %}" method="post">
+            {% csrf_token %}
+            <label for="Pregnancies">Number of Pregnancies:</label><br>
+            <input type="text" id="Pregnancies" name="Pregnancies" min="0" required><br>
+            
+            <label for="Glucose">Glucose Level:</label><br>
+            <input type="text" id="Glucose" name="Glucose" min="0" required><br>
+            
+            <label for="BloodPressure">Blood Pressure:</label><br>
+            <input type="text" id="BloodPressure" name="BloodPressure" min="0" required><br>
+
+            <label for="SkinThickness">Skin Thickness:</label><br>
+            <input type="text" id="SkinThickness" name="SkinThickness" min="0" required><br>
+
+            <label for="Insulin">Insulin:</label><br>
+            <input type="text" id="Insulin" name="Insulin" min="0" required><br>
+
+            <label for="BMI">BMI:</label><br>
+            <input type="text" id="BMI" name="BMI" min="0" required><br>
+
+            <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label><br>
+            <input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" min="0" required><br>
+
+            <label for="Age">Age:</label><br>
+            <input type="text" id="Age" name="Age" min="0" required><br>
+            
+            <!-- Add more input fields for other risk factors as needed -->
+            
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>

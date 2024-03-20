@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{% static 'C:\\data science\\diabetes_prediction_project\\diabetes_prediction_project\\static\\stylesheet1.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'C:\\data science\\diabetes_prediction_project\\diabetes_prediction_project\\static\\home1.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            /* Add additional styling for the container if needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Diabetes Prediction</h1>
+        <p>Please proceed to the prediction form to check if you are at risk of diabetes.</p>
+        <a href="{% url 'predict' %}">Go to Prediction Form</a>
+    </div>
+</body>
+</html>
